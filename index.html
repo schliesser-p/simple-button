@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button</title>
-   
-   <style>
-        * {
-            font-size: 100%;
-            font-family: Arial;
-            color: white;
-        }
-
-        body {
-            background-color: rgb(0, 13, 126);
-        }
-
-        #glossy-button {
-            width: 100px; /* Adjust as needed */
-            height: 100px; /* Adjust as needed */
-            background-color: #FF0000; /* Red color */
-            border-radius: 50%; /* Circular shape */
-            border: solid 3px #0f0e0e; /* Grey border */
-            box-shadow:
-                inset 0px 4px 5px rgba(255, 255, 255, 0.5), /* Inner top light line */
-                inset 0px -4px 3px rgba(128, 128, 128, 0.5), /* Inner bottom shadow */
-                0px 2px 3px rgba(128, 128, 128, 0.5); /* Outer shadow effect */
-            position: relative;
-            overflow: hidden;
-        }
-
-        #glossy-button:active {
-            transform: scale(0.95); /* Scale down the button slightly when clicked */
-        }
-    </style>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .button-container {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  .button {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .button .top {
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transition: transform 0.1s ease;
+  }
+  .button:active .top {
+    transform: translateY(5px);
+  }
+</style>
 </head>
 <body>
-    <h1>Header</h1>
-    <p>some text</p>
-    <button id="glossy-button"></button>
-    <audio id="button-sound" src="sound.mp3"></audio>
-    <script>
-        document.getElementById("glossy-button").addEventListener("click", function() {
-         var audio = document.getElementById("button-sound");
-         audio.play();
-        });
-    </script>
+<div class="button-container">
+  <div class="button">
+    <div class="top"></div>
+  </div>
+  <script></script>
+</div>
 </body>
 </html>
