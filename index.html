@@ -34,11 +34,15 @@
 </style>
 </head>
 <body>
-<div class="button-container">
-  <div class="button">
-    <div class="top"></div>
-  </div>
-  <script></script>
-</div>
+    <h1>Header</h1>
+    <p>some text</p>
+    <button id="glossy-button"></button>
+    <audio id="button-sound" src="sound.mp3"></audio>
+    <script>
+        document.getElementById("glossy-button").addEventListener("click", function() {
+         var audio = document.getElementById("button-sound");
+         audio.play();
+        });
+    </script>
 </body>
 </html>
